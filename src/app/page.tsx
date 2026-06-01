@@ -1,5 +1,5 @@
 import { ArrowRight, FlaskConical, GraduationCap, Sparkles } from "lucide-react";
-import { ButtonLink } from "@/components/Button";
+import { ProtectedLink } from "@/components/ProtectedLink";
 
 const topics = [
   "Ciencia de la luz",
@@ -31,8 +31,8 @@ export default function HomePage() {
             A través de quizzes, casos clínicos y retroalimentación inmediata, podrás medir tu dominio en colorimetría aplicada, neutralización, pigmentología y diagnóstico cromático.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/evaluacion-global">Comenzar evaluación <ArrowRight className="ml-2" size={16} /></ButtonLink>
-            <ButtonLink href="/modulos" variant="secondary">Explorar módulos</ButtonLink>
+            <ProtectedLink href="/evaluacion-global">Comenzar evaluación <ArrowRight className="ml-2" size={16} /></ProtectedLink>
+            <ProtectedLink href="/modulos" variant="secondary">Explorar módulos</ProtectedLink>
           </div>
         </div>
 

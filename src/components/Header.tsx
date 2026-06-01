@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
+import { ProtectedLink } from "@/components/ProtectedLink";
 
 const links = [
   ["Módulos", "/modulos"],
@@ -20,10 +23,11 @@ export function Header() {
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {links.map(([label, href]) => (
-            <Link className="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-wine/5 hover:text-wine" href={href} key={href}>
+            <ProtectedLink href={href} key={href} variant="nav">
               {label}
-            </Link>
+            </ProtectedLink>
           ))}
+          <ProtectedLink href="/modulos" variant="secondary">Acceder</ProtectedLink>
         </nav>
       </div>
     </header>
