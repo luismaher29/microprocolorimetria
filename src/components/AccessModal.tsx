@@ -74,6 +74,18 @@ export function AccessModal({ open, onClose, onSuccess }: Props) {
           <Button className="w-full" type="submit">Acceder</Button>
         </form>
 
+        <div className="mt-5 rounded-2xl border border-sand/35 bg-white/65 px-4 py-3 text-center text-sm text-ink/65">
+          ¿Todavía no tienes acceso?{" "}
+          <a
+            className="font-semibold text-wine underline decoration-sand underline-offset-4 transition hover:text-plum"
+            href="https://guiapigmentologia.vercel.app/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Adquiere tu guía aquí
+          </a>
+        </div>
+
         <p className="mt-4 text-xs leading-5 text-ink/52">
           El acceso se guardará en este dispositivo. Esta versión no usa login ni base de datos.
         </p>
